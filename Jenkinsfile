@@ -1,11 +1,21 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('Git clone'){
-            steps{
-                echo "Đang clone dữ liệu về nhé.!!"
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
             }
         }
-         
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
 }
